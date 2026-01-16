@@ -76,6 +76,7 @@ body {
 .info-box p {
   font-size: 13px;
   opacity: 0.85;
+  color: var(--primary);
 }
 
 .info-box h1 {
