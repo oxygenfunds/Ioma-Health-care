@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors </title>
+    <script src="https://kit.fontawesome.com/f08ef06bb1.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="./news.css" >  -->
+
+
+
+</head>
+<style>
+
+:root {
+     --primary:#1a245f;
+    --secondary:#159EEC;
+    --text:green;
+    --border: #e1e1e1;
+    --light-bg:#f4f7fb;
+    --white:#ffff;
+    --modern:#02DDCD;
+    --accent: #BFD2F8;
+
+        }
+
+        * { margin: 0; 
+            padding: 0;
+             box-sizing: border-box;
+              font-family: 'Segoe UI', sans-serif; 
+            }
+
+        /* Top Header Info */
+        .top-bar {
+                 padding: 10px 10%;
+                 display: flex; 
+                justify-content: space-between;
+                align-items: center; 
+                background: var(--primary); 
+                flex-wrap: wrap; 
+            }
+        .info-item {
+                 display: flex;
+                 align-items: center;
+                 gap: 10px; 
+                 color: var(--white);
+                 font-size: 13px; 
+            }
+        .info-item i {
+                 font-size: 24px; 
+                 color: var(--secondary);
+         }
+        .info-item b { 
+                display: block;
+                text-transform: uppercase;
+             }
+
+        /* Navigation */
+        header { 
+                padding: 0 10%; 
+                background: var(--primary); 
+                display: flex; 
+                justify-content: space-between;
+                align-items: center; 
+                top: 0;
+                z-index: 1000; 
+                
+            }
+        .nav-links { 
+            display: flex; 
+        }
+        .nav-links a { 
+                 text-decoration: none;
+                 color: white; padding: 25px 20px;
+                 font-size: 14px; transition: 0.3s; 
+            }
+        
+        .btn-appointment { 
+                background: var(--secondary); 
+                color: var(--white); 
+                padding: 12px 30px;
+                border-radius: 50px; border: none;
+                font-weight: bold;
+                cursor: pointer; 
+            }
+            .btn-appointment a {
+                text-decoration: none;
+                font-size: 22px;
+                color: var(--white);
+            }
+
+        /* Hero */
+        .hero { 
+            background: url(./images_health/Article@2x-2.png) no-repeat center/cover;
+            
+            
+            padding: 100px 10%; 
+        }
+        .hero h1 {
+             color: var(--white); 
+            font-size: 48px; 
+            font-weight: 800; 
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .hero p { color: var(--white); 
+            margin-bottom: 20px; 
+        }
+
+        /* Doctor Card Slider */
+        .section-padding { 
+            padding: 80px 10%; 
+        }
+        .doctor-card { background: #fff;
+             border-radius: 5px; 
+             overflow: hidden; text-align: center;
+              box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+            }
+        .doctor-card img { 
+            width: 100%;
+             object-fit: cover; 
+        }
+        .card-body { 
+                background: var(--accent);
+                padding: 20px; 
+            }
+        .card-body h3 {
+             color: var(--text); 
+            margin-bottom: 5px; 
+        }
+        .socials { 
+            display: flex;
+             justify-content: center;
+              gap: 15px; 
+              margin: 15px 0;
+               
+            }
+        .socials i { 
+           background: var(--text);
+             color: var(--secondary);
+              width: 30px; height: 30px;
+               line-height: 30px; border-radius: 50%;
+                font-size: 14px; 
+                cursor: pointer; 
+            }
+        .view-profile { width: 100%; 
+            padding: 15px; 
+            background: var(--primary);
+             color: var(--modern);
+              border: none;
+               cursor: pointer; 
+               font-weight: bold; 
+            }
+
+        /* Testimonial */
+        .testimonial {  
+            background: linear-gradient(rgba(31, 43, 108, 0.85), rgba(31, 43, 108, 0.85)), url(./images_health/Article-1.png)  no-repeat center/cover  ;
+                        
+            padding: 100px 15%; 
+            text-align: center; 
+            
+        }
+        .testimonial p { 
+            font-size: 1.2rem; 
+            line-height: 1.8;
+            margin-bottom: 30px; 
+            color: var(--white);
+            }
+
+        /* News Section */
+        .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+            gap: 30px; 
+            margin-top: 40px; 
+        }
+        .news-card { display: flex; 
+            background: white; gap: 20px;
+             box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+            }
+        .news-card img { width: 150px; object-fit: cover; }
+        .news-content { padding: 15px; }
+        .news-meta { font-size: 12px; color: var(--accent); margin-bottom: 10px; }
+        .news-stats { margin-top: 10px; font-size: 13px; color: #777; }
+
+        /* Footer */
+
+        footer {
+                background: var(--primary); 
+                color: white;
+                padding: 80px 10% 30px;
+         }
+        .footer-grid { display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+                gap: 50px;
+                margin-bottom: 50px; 
+        }
+        .footer-col h4 { border-bottom: 2px solid var(--accent);
+                 display: inline-block;
+                padding-bottom: 5px; 
+                margin-bottom: 20px; 
+            }
+        .footer-col p, .footer-col li { opacity: 0.8; 
+                font-size: 14px;
+                margin-bottom: 10px;
+                list-style: none; }
+
+        /* Mobile View */
+        @media (max-width: 768px) {
+            .top-bar, .nav-links { 
+                display: flex; 
+            }
+            .news-grid { 
+                grid-template-columns: 1fr; 
+            }
+            .news-card { 
+                flex-direction: column; 
+            }
+            .news-card img { 
+                width: 100%;
+                 height: 200px; 
+                }
+            header {
+                flex-direction: column;
+                align-items: center;
+                padding: 18px 18px;
+            }
+            .nav-links {
+                flex-wrap:wrap ;
+                justify-content: center;
+                gap: 12px;
+                margin-top: 10px;
+            }
+        }
+        @media (max-width:600px ) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+
+
+
+<body>
+
+
+    <div class="top-bar">
+        <div class="logo" style="font-size: 30px; font-weight: 900;"><p>IAO<span>MAI</span></p></div>
+        <div class="info-item">
+            <i class="fas fa-phone-alt"></i>
+            <div><b>Emergency</b> (237) 681-812-255</div>
+        </div>
+
+        <div class="info-item">
+            <i class="far fa-clock"></i>
+            <div><b>Work Hour</b> 09:00 - 20:00 Everyday</div>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div><b>Location</b> 0123 Some Place</div>
+        </div>
+    </div>
+
+    <header>
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About us</a>
+            <a href="#">Services</a>
+            <a href="#" class="active">Doctors</a>
+            <a href="./index.html">News</a>
+            <a href="#">Contact</a>
+        </nav>
+        <button class="btn-appointment" type="button">  <a href="">Appointment</a></button>
+    </header>
+
+    <section class="hero">
+        <p>Home / Doctors</p>
+        <h1>Our Doctors</h1>
+    </section>
+
+    <div class="section-padding">
+        <div class="swiper doctorSwiper" id="doctors-slide">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="doctor-card">
+
+                        <img src="images_health/pic_2.jpg" >
+                        
+                        <div class="card-body">
+
+                            <h3>Dr. James Wilson</h3>
+                            <p>NEUROLOGY</p>
+                            <div class="socials"><i class="fab fa-linkedin-in"></i><i class="fab fa-facebook-f"></i><i class="fab fa-instagram"></i></div>
+                            <button class="view-profile">View Profile</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="doctor-card">
+
+                        <img src="images_health/pic_1.jpg">
+
+                        <div class="card-body">
+                            <h3>Dr. Sarah Jenkins</h3>
+                            <p>NEUROLOGY</p>
+                            <div class="socials"><i class="fab fa-linkedin-in"></i><i class="fab fa-facebook-f"></i><i class="fab fa-instagram"></i></div>
+                            <button class="view-profile">View Profile</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="doctor-card">
+
+                       <img src="images_health/pic_3.jpg">
+                       
+                        <div class="card-body">
+                            <h3>Dr. Samuel Lee</h3>
+                            <p>NEUROLOGY</p>
+                            <div class="socials"><i class="fab fa-linkedin-in"></i><i class="fab fa-facebook-f"></i><i class="fab fa-instagram"></i></div>
+                            <button class="view-profile">View Profile</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <section class="testimonial">
+        <i class="fas fa-quote-right" style="font-size: 50px; margin-bottom: 20px;"></i>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor ornare ornare. Quisque placerat scelerisque felis vitae tortor augue.</p>
+        <hr style="width: 50px; margin: 20px auto; border: 1px solid white;">
+        <h4>John Doe</h4>
+    </section>
+
+    <section class="section-padding">
+
+         <center>
+            <p style="color: var(--primary); font-weight: bold; letter-spacing: 2px;">BETTER INFORMATION, BETTER HEALTH</p>
+            <h2 style="color: var(--navy); font-size: 32px;">News</h2>
+        </center>
+        
+        <div class="news-grid">
+            <div class="news-card">
+
+                <img src="images_health/subhead_2.jpg">
+                <div class="news-content">
+                    <div class="news-meta">Monday 05, September 2021 | By Author</div>
+                    <h4>This Article's Title goes Here, but not too long.</h4>
+                    <div class="news-stats"><i class="far fa-eye"></i> 68 <i class="far fa-heart" style="margin-left: 10px;"></i> 86</div>
+                </div>
+            </div>
+            <div class="news-card">
+
+                <img src="images_health/subhead_2.jpg">
+                <div class="news-content">
+                    <div class="news-meta">Monday 05, September 2021 | By Author</div>
+                    <h4>This Article's Title goes Here, but not too long.</h4>
+                    <div class="news-stats"><i class="far fa-eye"></i> 68 <i class="far fa-heart" style="margin-left: 10px;"></i> 86</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2 style="margin-bottom: 20px;">IAOMAI</h2>
+                <p>Leading the Way in Medical Excellence, Trusted Care.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Important Links</h4>
+                <ul>
+                    <li>Appointment</li>
+                    <li>Doctors</li>
+                    <li>Services</li>
+                    <li>About Us</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p>Call: +1 (650)613-440</p>
+                <p>Email: ioamiahealth@gmail.com</p>
+                <p>Address: plot 19 browish city</p>
+
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <input type="text" placeholder="Enter your email" style="padding: 10px; border-radius: 4px; border: none; width: 100%;"  id="email ">
+            </div>
+        </div>
+        <p style="text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">© 2026 IOAMIA Healthcare |All Rights Reserved by PNTEC-LTD</p>
+    </footer>
+
+    
+    
+
+
+
+
+
+
+   <script src="./news.js"></script> 
+</body>
+</html>
