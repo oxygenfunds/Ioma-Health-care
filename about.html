@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About </title>
+    <script src="https://kit.fontawesome.com/f08ef06bb1.js" crossorigin="anonymous"></script>
+
+<style>
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    :root {
+     --primary:#1a245f;
+    --secondary:#159EEC;
+    --text:green;
+    --border: #e1e1e1;
+    --light-bg:#f4f7fb;
+    --white:#ffff;
+    --modern:#02DDCD;
+    --accent: #BFD2F8;
+
+        }
+
+         .top-bar {
+                 padding: 10px 10%;
+                 display: flex; 
+                justify-content: space-between;
+                align-items: center; 
+                background: var(--primary); 
+                flex-wrap: wrap; 
+            }
+        .info-item {
+                 display: flex;
+                 align-items: center;
+                 gap: 10px; 
+                 color: var(--white);
+                 font-size: 13px; 
+            }
+        .info-item i {
+                 font-size: 24px; 
+                 color: var(--secondary);
+         }
+        .info-item b { 
+                display: block;
+                text-transform: uppercase;
+             }
+
+        /* Navigation */
+        header { 
+                padding: 0 10%; 
+                background: var(--primary); 
+                display: flex; 
+                justify-content: space-between;
+                align-items: center; 
+                top: 0;
+                z-index: 1000; 
+                
+            }
+        .nav-links { 
+            display: flex; 
+        }
+        .nav-links a { 
+                 text-decoration: none;
+                 color: white; padding: 25px 20px;
+                 font-size: 14px; transition: 0.3s; 
+            }
+        
+        .btn-appointment { 
+                background: var(--secondary); 
+                color: var(--white); 
+                padding: 12px 30px;
+                border-radius: 50px; border: none;
+                font-weight: bold;
+                cursor: pointer; 
+            }
+            .btn-appointment a {
+                text-decoration: none;
+                font-size: 22px;
+                color: var(--white);
+            }
+
+        /* Hero */
+        .hero { 
+            background: url(./images_health/Article@2x-2.png) no-repeat center/cover;
+            padding: 100px 10%; 
+        }
+        .hero h1 {
+             color: var(--white); 
+            font-size: 48px; 
+            font-weight: 800; 
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .hero p { color: var(--white); 
+            margin-bottom: 20px; 
+        }
+
+
+
+</style>    
+
+</head>
+
+
+
+
+<body>
+
+
+    <div class="top-bar">
+        <div class="logo" style="font-size: 30px; font-weight: 900;"><p>IAO<span>MAI</span></p></div>
+        <div class="info-item">
+            <i class="fas fa-phone-alt"></i>
+            <div><b>Emergency</b> (237) 681-812-255</div>
+        </div>
+
+        <div class="info-item">
+            <i class="far fa-clock"></i>
+            <div><b>Work Hour</b> 09:00 - 20:00 Everyday</div>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div><b>Location</b> 0123 Some Place</div>
+        </div>
+    </div>
+
+    <header>
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About us</a>
+            <a href="#">Services</a>
+            <a href="#" class="active">Doctors</a>
+            <a href="./index.html">News</a>
+            <a href="#">Contact</a>
+        </nav>
+        <button class="btn-appointment" type="button">  <a href="./appoitnment.html">Appointment</a></button>
+    </header>
+
+    <section class="hero">
+        <p>Home / Doctors / About </p>
+        <h1>Our Doctors</h1>
+    </section>
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+ 
+</body>
+</html>

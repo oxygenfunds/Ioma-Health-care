@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+
+    :root {
+     --primary:#1a245f;
+    --secondary:#159EEC;
+    --text:green;
+    --border: #e1e1e1;
+    --light-bg:#f4f7fb;
+    --white:#ffff;
+    --modern:#02DDCD;
+    --accent: #BFD2F8;
+
+        }
+
+        * { margin: 0; 
+            padding: 0;
+             box-sizing: border-box;
+              font-family: 'Segoe UI', sans-serif; 
+            }
+
+        /* Top Header Info */
+        .top-bar {
+                 padding: 10px 10%;
+                 display: flex; 
+                justify-content: space-between;
+                align-items: center; 
+                background: var(--primary); 
+                flex-wrap: wrap; 
+            }
+        .info-item {
+                 display: flex;
+                 align-items: center;
+                 gap: 10px; 
+                 color: var(--white);
+                 font-size: 13px; 
+            }
+        .info-item i {
+                 font-size: 24px; 
+                 color: var(--secondary);
+         }
+        .info-item b { 
+                display: block;
+                text-transform: uppercase;
+             }
+
+        /* Navigation */
+        header { 
+                padding: 0 10%; 
+                background: var(--primary); 
+                display: flex; 
+                justify-content: space-between;
+                align-items: center; 
+                top: 0;
+                z-index: 1000; 
+                
+            }
+        .nav-links { 
+            display: flex; 
+        }
+        .nav-links a { 
+                 text-decoration: none;
+                 color: white; padding: 25px 20px;
+                 font-size: 14px; transition: 0.3s; 
+            }
+        
+        .btn-appointment { 
+                background: var(--secondary); 
+                color: var(--white); 
+                padding: 12px 30px;
+                border-radius: 50px; border: none;
+                font-weight: bold;
+                cursor: pointer; 
+            }
+            .btn-appointment a {
+                text-decoration: none;
+                font-size: 22px;
+                color: var(--white);
+            }
+
+        /* Hero */
+        .hero { 
+            background: url(./images_health/recp_1.webp) no-repeat center/cover;
+            padding: 100px 10%; 
+        }
+        .hero h1 {
+             color: var(--secondary); 
+            font-size: 2.8; 
+            font-weight: 800; 
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .hero p { color: var(--primary); 
+            margin-bottom: 20px; 
+            font-size: 22px;
+        }
+       
+
+
+        .booking-container {
+         display: flex;
+        max-width: 1000px;
+        background: var(--white);
+        margin: 0 auto;
+        border-radius: 5px;
+        overflow: hidden;
+        top: 40px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.booking-section {
+        font-size: 32px;
+        margin-bottom: 20px; 
+         font-family: 'Playfair Display',  serif; 
+        flex: 1.5;
+        background: var(--white);
+        color: var(--primary);
+        padding: 60px;
+         
+}
+        .form-side {
+        flex: 1.5;
+        background: var(--primary);
+        color: var(--secondary);
+        padding: 60px;
+        gap: 30px;
+}
+
+        .form-side h2 { 
+        font-size: 32px;
+        margin-bottom: 20px; 
+         font-family: 'Playfair Display',  serif; 
+}
+.intro-text { font-size: 14px; 
+    opacity: 0.8; 
+    line-height: 1.6;
+     margin-bottom: 40px;
+    }
+
+.input-row { display: flex;
+     gap: 0;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+     
+    }
+.styled-form input {
+    background: transparent;
+    border: none;
+    padding: 15px;
+    color: white;
+    width: 100%;
+    outline: none;
+}
+.styled-form select {
+    padding: 16px;
+    border: none;
+    color: var(--modern);
+    background: transparent;
+    outline: none;
+}
+
+.styled-form textarea {
+     background: transparent;
+    border: none;
+    padding: 15px;
+    color: white;
+    width: 100%;
+    outline: none;
+    resize: none;
+
+}
+
+.styled-form select { 
+    border-left: 1px solid rgba(255,255,255,0.2); 
+}
+
+.submit-full {
+    width: 100%;
+    padding: 15px;
+    background: #BFD2F8;
+    color: #1F2B6C;
+    border: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* Hours Side (Slightly Darker) */
+.hours-side {
+    flex: 1;
+    background: #151D4A;
+    color: white;
+    padding: 60px;
+    border-left: 1px solid rgba(255,255,255,0.1);
+    justify-content: space-between;
+    margin-left: 15px;
+}
+
+.schedule-list { list-style: none; margin: 30px 0; }
+.schedule-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.emergency-footer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+
+        footer {
+                background: var(--primary); 
+                color: white;
+                padding: 80px 10% 30px;
+                margin-top: 10px;
+         }
+        .footer-grid { display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+                gap: 50px;
+                margin-bottom: 50px; 
+        }
+        .footer-col h4 { border-bottom: 2px solid var(--accent);
+                 display: inline-block;
+                padding-bottom: 5px; 
+                margin-bottom: 20px; 
+            }
+        .footer-col p, .footer-col li { opacity: 0.8; 
+                font-size: 14px;
+                margin-bottom: 10px;
+                list-style: none; 
+}
+
+
+.text-center { 
+    text-align: center; 
+    margin-bottom: 40px; 
+}
+.section-subtitle { color: #159EEC; 
+    font-weight: bold;
+     letter-spacing: 2px; 
+     font-size: 14px;
+ }
+.section-title { color: #1F2B6C;
+     font-size: 36px;
+    font-family: 'Playfair Display', serif; 
+    }
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    min-width: 100px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    padding: 40px 20px;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.contact-card i { font-size: 32px; margin-bottom: 15px; }
+.contact-card h3 { font-size: 18px; margin-bottom: 10px; }
+.contact-card p { font-size: 14px; margin: 2px 0; }
+
+.card-light-blue { background: #BFD2F8; color: #1F2B6C; }
+.card-dark-navy { background: #1F2B6C; color: white; }
+
+
+
+ /* Mobile View */
+        @media (max-width: 768px) {
+            .top-bar, .nav-links { 
+                display: flex; 
+            }
+            .news-grid { 
+                grid-template-columns: 1fr; 
+            }
+            .news-card { 
+                flex-direction: column; 
+            }
+             header {
+                flex-direction: column;
+                align-items: center;
+                padding: 18px 18px;
+            }
+            .nav-links {
+                flex-wrap:wrap ;
+                justify-content: center;
+                gap: 12px;
+                margin-top: 10px;
+     }
+              .contact-grid { 
+               display: flex;
+               width: 80%;
+                flex-direction: column;
+     }
+             .footer-container {
+                 grid-template-columns: 1fr;
+     }
+      .footer-grid {
+        display: flex;
+        flex-direction: column;
+        
+    }
+     .footer-box, .flex-box {
+        width: 100%;
+        margin: 15px 0;
+    }
+     .newsletter {
+        max-width: 90%;
+    }
+}
+
+
+
+
+
+
+
+</style>
+
+
+<body>
+
+
+    <div class="top-bar">
+        <div class="logo" style="font-size: 30px; font-weight: 900;"><p>IAO<span>MAI</span></p></div>
+        <div class="info-item">
+            <i class="fas fa-phone-alt"></i>
+            <div><b>Emergency</b> (237) 681-812-255</div>
+        </div>
+
+        <div class="info-item">
+            <i class="far fa-clock"></i>
+            <div><b>Work Hour</b> 09:00 - 20:00 Everyday</div>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div><b>Location</b> 0123 Some Place</div>
+        </div>
+    </div>
+
+    <header>
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="./about.html">About us</a>
+            <a href="#">Services</a>
+            <a href="#" class="active">Doctors</a>
+            <a href="./index.html">News</a>
+            <a href="#">Contact</a>
+        </nav>
+        <button class="btn-appointment" type="button">  <a href="">Appointment</a></button>
+    </header>
+
+    <section class="hero">
+        <p>Home / Doctors /  Appointment</p>
+        <h1>BOOk Appointment</h1>
+    </section>
+
+
+
+    <section class="booking-section ">
+           <!-- <div class="form-side"> -->
+            <h2>Book an Appointment</h2>
+           <p class="intro-text">Please fill out the form below to book an appointment with our<br>
+             healthcare professionals.
+
+           </p>
+    <div class="booking-container">
+
+        
+        <div class="form-side">
+           
+            
+            <form id="appointmentForm" class="styled-form">
+                <div class="input-row">
+                    <input type="text" placeholder="Name" required>
+                    <select><option> Grender </option> <option> Male </option> <option> Female </option></select>
+                </div>
+
+
+                <div class="input-row">
+                    <input type="email" placeholder="Email" required>
+                    <input type="tel" placeholder="Phone" required>
+                </div>
+
+
+                <div class="input-row">
+                    <select required><option>Date</option></select>
+                    <select required><option value="" disabled>Time</option>
+                    <option> 9am-12am</option> <option>12am-3pm</option>
+                    <option>3pm-6pm</option> 
+                    </select>
+                </div>
+
+
+                <div class="input-row">
+                    <select required> <option value=""disabled > Select Department</option> <option> Neurology</option> <option>Psychology</option>
+                    <option>Pediatrics</option> <option>Cardiology</option> <option>Orthopedics</option>
+                        <option>Doctor</option>
+                </select>
+                   
+                </div> 
+
+
+                <textarea placeholder="Message" rows="4"></textarea>
+                <button type="submit" class="submit-full">SUBMIT</button>
+            </form>
+        </div>
+
+        <div class="hours-side">
+            <h2>Shedule hours</h2>
+            <ul class="schedule-list">
+                <li><span>Monday</span> <span>09:00 AM - 07:00 PM</span></li>
+                <li><span>Tuesday</span> <span>09:00 AM - 07:00 PM</span></li>
+                <li><span>Wednesday</span> <span>09:00 AM - 07:00 PM</span></li>
+                <li><span>Thursday</span> <span>09:00 AM - 07:00 PM</span></li>
+                <li><span>Friday</span> <span>09:00 AM - 07:00 PM</span></li>
+                <li><span>Saturday</span> <span>09:00 AM - 07:00 PM</span></li>
+                <li><span>Sunday</span> <span>Closed</span></li>
+            </ul>
+            <div class="emergency-footer">
+                <i class="fas fa-phone-alt"></i>
+                <div>
+                    <h4>Emergency</h4>
+                    <h3>(237) 681-812-255</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <div class="map">
+
+
+
+        
+    </div>
+    <!-- contact section  -->
+
+    <section class=" contact-info-section">
+    <div class="text-center">
+        <p class="section-subtitle">GET IN TOUCH</p>
+        <h2 class="section-title">Contact</h2>
+    </div>
+
+    <div class="contact-grid">
+        <div class="contact-card card-light-blue">
+            <i class="fas fa-phone-alt"></i>
+            <h3>EMERGENCY</h3>
+            <p>(237) 681-812-255</p>
+           
+        </div>
+
+        <div class="contact-card card-dark-navy">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>LOCATION</h3>
+            <p>  West browish city london</p>
+            <p>plot 91ad empire estate Newrork</p>
+            
+        </div>
+
+        <div class="contact-card card-light-blue">
+            <i class="far fa-envelope"></i>
+            <h3>EMAIL</h3>
+            <p>Iomia@gmail.com</p>
+            
+        </div>
+
+        <div class="contact-card card-light-blue">
+            <i class="far fa-clock"></i>
+            <h3>WORKING HOURS</h3>
+            <p>Mon-Sat 09:00-20:00</p>
+            <p>Sunday Emergency only</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+     <footer>
+
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2 style="margin-bottom: 20px;">IAOMAI</h2>
+                <p>Leading the Way in Medical Excellence, Trusted Care.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Important Links</h4>
+                <ul>
+                    <li>Appointment</li>
+                    <li>Doctors</li>
+                    <li>Services</li>
+                    <li>About Us</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p>Call: +1 (650)613-440</p>
+                <p>Email: ioamiahealth@gmail.com</p>
+                <p>Address: plot 19 browish city</p>
+
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <input type="text" placeholder="Enter your email" style="padding: 10px; border-radius: 4px; border: none; width: 100%;"  id="email " required>
+            </div>
+        </div>
+        <p style="text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">© 2026 IOAMIA Healthcare |All Rights Reserved by PNTEC-LTD</p>
+
+
+
+
+
+
+
+
+
+
+
+     </footer>
+
+    
+
+
+
+
+
+
+    
+
+    
+    
+
+
+    
+
+
+
+
+
+
+
+
+
+</body>
+</html>
