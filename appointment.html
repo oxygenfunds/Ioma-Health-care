@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>appointment Page </title>
 </head>
 <style>
 
@@ -195,19 +195,25 @@
     flex: 1;
     background: #151D4A;
     color: white;
+    display: flex;
+    flex-direction: column;
     padding: 60px;
     border-left: 1px solid rgba(255,255,255,0.1);
     justify-content: space-between;
     margin-left: 15px;
 }
 
-.schedule-list { list-style: none; margin: 30px 0; }
+.schedule-list {
+     list-style: none; 
+    margin: 30px 0; 
+}
 .schedule-list li {
     display: flex;
     justify-content: space-between;
     padding: 12px 0;
     font-size: 14px;
     border-bottom: 1px solid rgba(255,255,255,0.1);
+    gap:  10px;
 }
 
 .emergency-footer {
@@ -358,15 +364,15 @@
             <a href="#">Home</a>
             <a href="./about.html">About us</a>
             <a href="#">Services</a>
-            <a href="#" class="active">Doctors</a>
+            <a href="./doctors.html">Doctors</a>
             <a href="./index.html">News</a>
-            <a href="#">Contact</a>
+            <a href="./">Contact</a>
         </nav>
         <button class="btn-appointment" type="button">  <a href="">Appointment</a></button>
     </header>
 
     <section class="hero">
-        <p>Home / Doctors /  Appointment</p>
+        <p>Home /   Appointment</p>
         <h1>BOOk Appointment</h1>
     </section>
 
@@ -390,7 +396,6 @@
                     <input type="text" placeholder="Name" required>
                     <select><option> Grender </option> <option> Male </option> <option> Female </option></select>
                 </div>
-
 
                 <div class="input-row">
                     <input type="email" placeholder="Email" required>
@@ -416,8 +421,8 @@
                 </div> 
 
 
-                <textarea placeholder="Message" rows="4"></textarea>
-                <button type="submit" class="submit-full">SUBMIT</button>
+                <textarea placeholder="Message" rows="4" required>   </textarea >
+                <!-- <button type="submit" class="submit-full">SUBMIT</button> -->
             </form>
         </div>
 
@@ -445,9 +450,6 @@
 
     <div class="map">
 
-
-
-        
     </div>
     <!-- contact section  -->
 

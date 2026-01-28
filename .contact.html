@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact </title>
+    <script src="https://kit.fontawesome.com/f08ef06bb1.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="./news.css" > -->
+</head>
+<style>
+
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    :root {
+     --primary:#1a245f;
+    --secondary:#159EEC;
+    --text:green;
+    --border: #e1e1e1;
+    --light-bg:#f4f7fb;
+    --white:#ffff;
+    --modern:#02DDCD;
+    --accent: #BFD2F8;
+
+        }
+
+ .top-bar {
+                 padding: 10px 10%;
+                 display: flex; 
+                justify-content: space-between;
+                align-items: center; 
+                background: var(--primary); 
+                flex-wrap: wrap; 
+            }
+        .info-item {
+                 display: flex;
+                 align-items: center;
+                 gap: 10px; 
+                 color: var(--white);
+                 font-size: 13px; 
+            }
+        .info-item i {
+                 font-size: 24px; 
+                 color: var(--secondary);
+         }
+        .info-item b { 
+                display: block;
+                text-transform: uppercase;
+             }
+
+        /* Navigation */
+        header { 
+                padding: 0 10%; 
+                background: var(--primary); 
+                display: flex; 
+                justify-content: space-between;
+                align-items: center; 
+                top: 0;
+                z-index: 1000; 
+                
+            }
+        .nav-links { 
+            display: flex; 
+        }
+        .nav-links a { 
+                 text-decoration: none;
+                 color: white; padding: 25px 20px;
+                 font-size: 14px; transition: 0.3s; 
+            }
+        
+        .btn-appointment { 
+                background: var(--secondary); 
+                color: var(--white); 
+                padding: 12px 30px;
+                border-radius: 50px; border: none;
+                font-weight: bold;
+                cursor: pointer; 
+            }
+            .btn-appointment a {
+                text-decoration: none;
+                font-size: 22px;
+                color: var(--white);
+            }
+
+
+      .hero { 
+            background: url(./images_health/Article-1.png) no-repeat center/cover;
+            padding: 100px 10%; 
+        }
+        .hero h1 {
+             color: var(--secondary); 
+            font-size: 2.8; 
+            font-weight: 800; 
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .hero p { color: var(--primary); 
+            margin-bottom: 20px; 
+            font-size: 22px;
+        }
+
+        .text-center { 
+    text-align: center; 
+    margin-bottom: 40px; 
+}
+.section-subtitle { color: #159EEC; 
+    font-weight: bold;
+     letter-spacing: 2px; 
+     font-size: 14px;
+ }
+.section-title { color: #1F2B6C;
+     font-size: 36px;
+    font-family: 'Playfair Display', serif; 
+    }
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    min-width: 100px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    padding: 40px 20px;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.contact-card i { font-size: 32px;
+     margin-bottom: 15px;
+ }
+.contact-card h3 { font-size: 18px;
+     margin-bottom: 10px;
+ }
+.contact-card p { font-size: 14px;
+     margin: 2px 0; 
+}
+
+.card-light-blue { background: #BFD2F8; color: #1F2B6C; }
+.card-dark-navy { background: #1F2B6C; color: white; }
+
+</style>
+
+
+<body>
+
+
+    <div class="top-bar">
+        <div class="logo" style="font-size: 30px; font-weight: 900;"><p>IAO<span>MAI</span></p></div>
+        <div class="info-item">
+            <i class="fas fa-phone-alt"></i>
+            <div><b>Emergency</b> (237) 681-812-255</div>
+        </div>
+
+         <!-- <i class="fa-solid fa-calendar" style=" font-size: 1.4rem;    color: var(--secondary)    ;    "></i> -->
+
+
+        <div class="info-item">
+            <i class="far fa-clock"></i>
+            <div><b>Work Hour</b> 09:00 - 20:00 Everyday</div>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div><b>Location</b> 0123 Some Place</div>
+        </div>
+    </div>
+
+    <header>
+          <nav class="nav-links">
+            <a href="" >Home</a>
+            <a href="./about.html">About us</a>
+            <a href="./services.html">Services</a>
+            <a href="./doctors.html">Doctors</a>
+            <a href="./index.html">News</a>
+            <a href="./contact.html">Contact</a>
+          </nav>
+             <button class="btn-appointment" type="button">  <a href="./appointment.html">Appointment</a></button>
+    </header>
+
+     <section class="hero">
+        <p>Home / Contact </p>
+        <h1>Our contact </h1>
+    </section>
+
+    <div class="map">
+
+    </div>
+
+
+     <section class=" contact-info-section">
+    <div class="text-center">
+        <p class="section-subtitle">GET IN TOUCH</p>
+        <h2 class="section-title">Contact</h2>
+    </div>
+
+    <div class="contact-grid">
+        <div class="contact-card card-light-blue">
+            <i class="fas fa-phone-alt"></i>
+            <h3>EMERGENCY</h3>
+            <p>(237) 681-812-255</p>
+           
+        </div>
+
+        <div class="contact-card card-dark-navy">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>LOCATION</h3>
+            <p>  West browish city london</p>
+            <p>plot 91ad empire estate Newrork</p>
+            
+        </div>
+
+        <div class="contact-card card-light-blue">
+            <i class="far fa-envelope"></i>
+            <h3>EMAIL</h3>
+            <p>Iomia@gmail.com</p>
+            
+        </div>
+
+        <div class="contact-card card-light-blue">
+            <i class="far fa-clock"></i>
+            <h3>WORKING HOURS</h3>
+            <p>Mon-Sat 09:00-20:00</p>
+            <p>Sunday Emergency only</p>
+        </div>
+    </div>
+</section>
+
+
+<footer>
+
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2 style="margin-bottom: 20px;">IAOMAI</h2>
+                <p>Leading the Way in Medical Excellence, Trusted Care.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Important Links</h4>
+                <ul>
+                    <li>Appointment</li>
+                    <li>Doctors</li>
+                    <li>Services</li>
+                    <li>About Us</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p>Call: +1 (650)613-440</p>
+                <p>Email: ioamiahealth@gmail.com</p>
+                <p>Address: plot 19 browish city</p>
+
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <input type="text" placeholder="Enter your email" style="padding: 10px; border-radius: 4px; border: none; width: 100%;"  id="email " required>
+            </div>
+        </div>
+        <p style="text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">© 2026 IOAMIA Healthcare |All Rights Reserved by PNTEC-LTD</p>
+
+
+
+
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>

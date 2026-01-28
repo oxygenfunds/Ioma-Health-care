@@ -16,8 +16,8 @@
 
 }
 body {
-    background: var(--light-bg);
-    color: var(--text-bg);
+    background: var(--white);
+   
     line-height: 1.6;
 }
 
@@ -70,36 +70,33 @@ body {
   font-size: 18px;
   font-weight: bold;
 }
-
-
-
-.header {
-    background: var(--primary);
-    padding: 18px 6%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.logo span {
+    color: var(--secondary);
 }
-nav a {
+
+header { 
+padding: 100px ; 
+background: var(--primary); 
+ display: flex; 
+ justify-content: space-between;
+ align-items: center; 
+ top: 0;
+ z-index: 100; 
+                
+}
+
+.nav-links  {
     background:var(--primary);
     padding:10px 18px;
     color:var(--white);
     justify-content:space-between;
     text-decoration:none;
     font-size:14px ;
-
 } 
-/* .point a{
-    font-size:2rem;
-    text-decoration:none;
-    color:var(--white)
+.nav-links a:hover {
+    text-decoration: underline;
+    color: var(--modern);
 }
-.point {
-    background:var(--secondary);
-    padding:10px 18px;
-    border-radius:13px;
-    
-    } */
 
  .btn-appointment { 
      background: var(--secondary); 
@@ -117,34 +114,81 @@ nav a {
  }
 
 
-.icons {
+/* .icons {
     display:flex;
     flex-direction:column;
     position:relative;
+    
    
-}
+} */
 .icons p, h1 {
     font-size:1.5rem;
     margin: 30px;
     
 }
+ header { 
+      padding: 10px 10%;   
+     background: var(--primary); 
+     display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+     top: 0;
+     z-index: 1000; 
+    
+                
+}
+        .nav-links { 
+            flex-wrap: wrap; 
+            
+        }
+        .nav-links a { 
+                 text-decoration: none;
+                 color: white; padding: 25px 20px;
+                 font-size: 14px; transition: 0.3s; 
+            }
 
 .hero {
-    background: url(./images_health/Article@2x-2.PNG)  no-repeat center center/cover;
-    padding: 100px ;
-    color:var(--white);
-    text-shadow:0 2px 6px ;
-    animation:fadeIn 1.2s ease;
-    z-index:-1;
+    background: url(./images_health/Article@2x-2.PNG )   no-repeat center center/cover  ;
+   width: 100% 10%;
+    height: 300px;
+    display: flex;
+   flex-wrap: wrap;
+    flex-direction:column;
+    align-items: center;
+    justify-content:center;
+    gap:15px;
+
+}
+.sub {
+   
+    padding:18px 18px;
+    flex-direction:column;
+    margin-left: 45px;
+    position: relative;
+  
+}
+.hero h2 {
+    color: var(--secondary);
+    font-size:2.5rem;
+    font-weight: 1000;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    text-shadow: #02DDCD 1px 1px 2px;
 }
 .hero a {
-
     padding:8px 10px;
     color:var(--white);
     justify-content:space-between;
     text-decoration:none;
-    font-size:1.5rem;
-    }
+    font-size:1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+.hero p {
+    color: var(--secondary);
+}
+
 .hero a:hover {
     text-decoration: underline;
     color: var(--modern);
@@ -154,17 +198,16 @@ nav a {
     margin-top: 10px;
     color: var(--secondary);
 }
-.icons {
-    color: var(--modern);
+.hero h3 {
+    font-size: 1.4rem;
+    color: var(--primary);
+    text-shadow: #1a245f 1px 2px ;
+    text-transform: capitalize;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
- .write { 
-    align-items: center;
-    /* margin-left: 50px; */
-    font-size: 1rem;
-    margin-bottom: 10px;
-   
-}
+
+ 
 /* pagination  */
 .pagination {
     background: var(--secondary);
@@ -193,7 +236,7 @@ nav a {
     padding: 50px 6%;
 }
 .container img {
-    width: 90%;
+    width: 65%;
     border-radius: 10px;
     margin-bottom: 20px;
     animation: fadeIn 1.2s ease;
@@ -247,10 +290,12 @@ nav a {
     padding: 30px 20px;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-    border: 1px solid var(--border);
+    border: none;
+    outline: none;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .contact-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 24px rgba(0,0,0,0.1);
@@ -284,6 +329,7 @@ nav a {
      background: var(--primary); 
      color: white;
     padding: 80px 10% 30px;
+    margin-top: 15px;
   }
     .footer-grid { 
         display: grid;
@@ -351,10 +397,6 @@ nav a {
 
 
 
-
-
-
-
 /* RESPOSIVE WEB DESIGN */
 
 @media(max-width:998px) {
@@ -379,12 +421,19 @@ nav a {
         flex-direction:column;
         gap:15px;
     }
-    nav{
-        display:flex;
-        flex-direction:column;
+    .nav-links{
+        display: flex;
+        flex-wrap: wrap;
+         display: flex;
+        justify-content: center;
+         gap: 5px;
+                
     }
     .hero h1 {
         font-size:1.5rem;
+    }
+    .hero h3 {
+        flex-wrap: wrap;
     }
     .container {
         grid-template-columns: 1fr;
@@ -412,11 +461,17 @@ nav a {
         align-items:center;
         padding:18px 18px;
     }
-    nav{
+    .nav-links{
         flex-wrap:wrap;
         justify-content:center;
-        gap:12px;
+        gap:5px;
         margin-top:10px;
+    }
+    .hero h3 {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 1rem;
     }
     .top-bar,nav {
         display: flex;
