@@ -5,8 +5,236 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="news.css">
+
+
+    <style>
+
+        .doctors-section {
+      padding: 80px 20px;
+    }
+
+    .doctors-container {
+      max-width: 1200px;   /* 🔥 THIS centers everything */
+      margin: 0 auto;
+    }
+
+    /* ===== GRID ===== */
+    .doctors-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+
+    /* ===== CARD ===== */
+    .doctor-card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .doctor-card img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+    }
+
+    .doctor-info {
+      background: #cfe0ff;
+      padding: 25px 20px;
+    }
+
+    .doctor-info h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: #1f2f6b;
+    }
+
+    .doctor-info p {
+      font-size: 13px;
+      letter-spacing: 3px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #1f2f6b;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .socials span {
+      width: 34px;
+      height: 34px;
+      background: #1f2f6b;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .view-profile {
+      background: #1f2f6b;
+      color: #fff;
+      padding: 14px;
+      font-size: 14px;
+    }
+
+     @media (max-width: 992px) {
+      .doctors-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .doctors-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    </style>
+
+
+
+
 </head>
+
+
+
+
 <body>
+
+    <section class="doctors-section">
+  <div class="doctors-container">
+    <div class="doctors-grid">
+
+      <!-- CARD 1 -->
+      <div class="doctor-card">
+        <img src="https://images.unsplash.com/photo-1606813902917-86c6fcb27d8c" />
+        <div class="doctor-info">
+          <h3>Doctor’s Name</h3>
+          <p>NEUROLOGY</p>
+          <div class="socials">
+            <span>in</span>
+            <span>f</span>
+            <span>ig</span>
+          </div>
+        </div>
+        <div class="view-profile">View Profile</div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="doctor-card">
+        <img src="https://images.unsplash.com/photo-1550831107-1553da8c8464" />
+        <div class="doctor-info">
+          <h3>Doctor’s Name</h3>
+          <p>NEUROLOGY</p>
+          <div class="socials">
+            <span>in</span>
+            <span>f</span>
+            <span>ig</span>
+          </div>
+        </div>
+        <div class="view-profile">View Profile</div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="doctor-card">
+        <img src="https://images.unsplash.com/photo-1587502537745-84b86da1204f" />
+        <div class="doctor-info">
+          <h3>Doctor’s Name</h3>
+          <p>NEUROLOGY</p>
+          <div class="socials">
+            <span>in</span>
+            <span>f</span>
+            <span>ig</span>
+          </div>
+        </div>
+        <div class="view-profile">View Profile</div>
+      </div>
+
+      <!-- Duplicate for second row -->
+      <div class="doctor-card">
+        <img src="https://images.unsplash.com/photo-1606813902917-86c6fcb27d8c" />
+        <div class="doctor-info">
+          <h3>Doctor’s Name</h3>
+          <p>NEUROLOGY</p>
+          <div class="socials">
+            <span>in</span>
+            <span>f</span>
+            <span>ig</span>
+          </div>
+        </div>
+        <div class="view-profile">View Profile</div>
+      </div>
+
+      <div class="doctor-card">
+        <img src="https://images.unsplash.com/photo-1550831107-1553da8c8464" />
+        <div class="doctor-info">
+          <h3>Doctor’s Name</h3>
+          <p>NEUROLOGY</p>
+          <div class="socials">
+            <span>in</span>
+            <span>f</span>
+            <span>ig</span>
+          </div>
+        </div>
+        <div class="view-profile">View Profile</div>
+      </div>
+
+      <div class="doctor-card">
+        <img src="https://images.unsplash.com/photo-1587502537745-84b86da1204f" />
+        <div class="doctor-info">
+          <h3>Doctor’s Name</h3>
+          <p>NEUROLOGY</p>
+          <div class="socials">
+            <span>in</span>
+            <span>f</span>
+            <span>ig</span>
+          </div>
+        </div>
+        <div class="view-profile">View Profile</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pagination dots -->
+
+
+
+
+
+
     
 </body>
+<script>
+     new Swiper(".doctorsSwiper", {
+    loop: true,
+    spaceBetween: 40,
+
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+
+    breakpoints: {
+      0: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 },
+    },
+  });
+</script>
 </html>
