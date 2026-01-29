@@ -58,16 +58,19 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         
         // Simple visual feedback
-        const btn = document.querySelector('.submit-btn');
+        const btn  = document.querySelector('.submit-full');
         btn.innerText = "Sending...";
         btn.style.opacity = "0.7";
         
+
         setTimeout(() => {
             alert("Thank you! Your appointment request has been sent. We will contact you shortly.");
             this.reset();
             btn.innerText = "Submit Request";
             btn.style.opacity = "1";
         }, 1500);
+
+        
     });
 
 

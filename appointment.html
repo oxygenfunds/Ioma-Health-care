@@ -103,13 +103,15 @@
        
         .booking-container {
          display: flex;
-        max-width: 1000px;
+        max-width: 1200px;
         background: var(--white);
         margin: 0 auto;
         border-radius: 5px;
         overflow: hidden;
         top: 40px;
         box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+
 }
 .booking-section {
         font-size: 32px;
@@ -119,6 +121,7 @@
         background: var(--white);
         color: var(--primary);
         padding: 60px;
+        
          
 }
         .form-side {
@@ -180,7 +183,7 @@
 }
 
 .submit-full {
-    width: 100%;
+    width: 90%;
     padding: 15px;
     background: #BFD2F8;
     color: #1F2B6C;
@@ -191,9 +194,11 @@
     cursor: pointer;
 }
 
-/* Hours Side (Slightly Darker) */
+
 .hours-side {
+    
     flex: 1;
+    max-width: 1100px;
     background: #151D4A;
     color: white;
     display: flex;
@@ -201,7 +206,9 @@
     padding: 60px;
     border-left: 1px solid rgba(255,255,255,0.1);
     justify-content: space-between;
-    margin-left: 15px;
+    margin-left: 0;
+
+  
 }
 
 .schedule-list {
@@ -222,6 +229,9 @@
     align-items: center;
     gap: 15px;
     margin-top: 40px;
+}
+.emergency-footer h4, h3 {
+    font-size: 16px;
 }
 
 
@@ -322,6 +332,7 @@
         flex-direction: column;
         
     }
+   
      .footer-box, .flex-box {
         width: 100%;
         margin: 15px 0;
@@ -329,9 +340,36 @@
      .newsletter {
         max-width: 90%;
     }
+    .booking-container {
+        flex-direction: column; /* Stacks form on top of hours */
+    }
+}
+@media (max-width: 992px) {
+            .hero h1 {
+                font-size: 24px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
+            .booking-container {
+             flex-direction: column; /* Stacks form on top of hours */
+
+    }
+            .form-side, .hours-side {
+            width: 100%;
+             padding: 40px 20px;
+    }
+            .input-row {
+            flex-direction: column; /* Inputs stack on small phones */
+    }
+             .hours-side 
+    {
+            margin-left: 0.1px;
+        
 }
 
 
+        }
 
 
 </style>
@@ -360,7 +398,7 @@
     <header>
         <nav class="nav-links">
             <a href="#">Home</a>
-            <a href="./about.html">About us</a>
+            <a href="#">About us</a>
             <a href="#">Services</a>
             <a href="./doctors.html">Doctors</a>
             <a href="./index.html">News</a>
@@ -377,7 +415,7 @@
 
 
     <section class="booking-section ">
-           <!-- <div class="form-side"> -->
+          
             <h2>Book an Appointment</h2>
            <p class="intro-text">Please fill out the form below to book an appointment with our<br>
              healthcare professionals.
@@ -387,11 +425,11 @@
 
         
         <div class="form-side">
-           
             
-            <form id="appointmentForm" class="styled-form">
+            <form id="appointmentForm" class="styled-form" >
                 <div class="input-row">
                     <input type="text" placeholder="Name" required>
+
                     <select><option> Grender </option> <option> Male </option> <option> Female </option></select>
                 </div>
 
@@ -403,9 +441,8 @@
 
                 <div class="input-row">
                     <select required><option>Date</option></select>
-                    <select required><option value="" disabled>Time</option>
-                    <option> 9am-12am</option> <option>12am-3pm</option>
-                    <option>3pm-6pm</option> 
+                    <input type="date" required>
+                    <input type="time" required>
                     </select>
                 </div>
 
@@ -420,7 +457,7 @@
 
 
                 <textarea placeholder="Message" rows="4" required>   </textarea >
-                <!-- <button type="submit" class="submit-full">SUBMIT</button> -->
+                <button type="submit" class="submit-full">SUBMIT</button>
             </form>
         </div>
 
@@ -446,9 +483,110 @@
     </div>
 </section>
 
+<!-- <section class="booking-section ">
+          
+            <h2>Book an Appointment</h2>
+           <p class="intro-text">Please fill out the form below to book an appointment with our<br>
+             healthcare professionals.
+
+           </p>
+    <div class="booking-container">
+
+        
+        <div class="form-side">
+<form id="appointmentForm" class="styled-form" novalidate>
+
+  <div class="input-row">
+    <div class="field">
+      <input type="text" required>
+      <label>Name</label>
+    </div>
+
+    <div class="field">
+      <select required>
+        <option value="" disabled selected></option>
+        <option>Male</option>
+        <option>Female</option>
+      </select>
+      <label>Gender</label>
+    </div>
+  </div>
+
+  <div class="input-row">
+    <div class="field">
+      <input type="email" required>
+      <label>Email</label>
+    </div>
+
+    <div class="field">
+      <input type="tel" required>
+      <label>Phone</label>
+    </div>
+  </div>
+
+  <div class="input-row">
+    <div class="field">
+      <input type="date" required>
+      <label>Date</label>
+    </div>
+
+    <div class="field">
+      <input type="time" required>
+      <label>Time</label>
+    </div>
+  </div>
+
+  <div class="field full">
+    <select required>
+      <option value="" disabled selected></option>
+      <option>Neurology</option>
+      <option>Psychology</option>
+      <option>Pediatrics</option>
+      <option>Cardiology</option>
+    </select>
+    <label>Department</label>
+  </div>
+
+  <div class="field full">
+    <textarea rows="4" required></textarea>
+    <label>Message</label>
+  </div>
+
+  <button type="submit" class="submit-full">SUBMIT</button>
+</form>
+
+<div class="hours-side">
+  <h2>Schedule Hours</h2>
+
+  <ul class="schedule-list">
+    <li><span>Monday</span><span>09:00 AM – 07:00 PM</span></li>
+    <li><span>Tuesday</span><span>09:00 AM – 07:00 PM</span></li>
+    <li><span>Wednesday</span><span>09:00 AM – 07:00 PM</span></li>
+    <li><span>Thursday</span><span>09:00 AM – 07:00 PM</span></li>
+    <li><span>Friday</span><span>09:00 AM – 07:00 PM</span></li>
+    <li><span>Saturday</span><span>09:00 AM – 07:00 PM</span></li>
+    <li><span>Sunday</span><span>Closed</span></li>
+  </ul>
+
+  <div class="emergency-footer">
+    <i class="fas fa-phone-alt"></i>
+    <div>
+      <p>Emergency</p>
+      <h3>(237) 681-812-255</h3>
+    </div>
+  </div>
+</div> -->
+
+
+
+
+</section>
+
+
     <div class="map">
 
     </div>
+
     <!-- contact section  -->
 
     <section class=" contact-info-section">

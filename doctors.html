@@ -194,7 +194,13 @@ align-items: center;
       background: #1f2f6b;
       color: #fff;
       padding: 14px;
-      font-size: 14px;
+      
+    }
+    .view-profile a {
+        color: var(--secondary);
+        text-decoration: none;
+        font-size: 20px;
+        padding: 16px;
     }
 
         
@@ -251,7 +257,15 @@ align-items: center;
         .footer-col p, .footer-col li { opacity: 0.8; 
                 font-size: 14px;
                 margin-bottom: 10px;
-                list-style: none; }
+                list-style: none; 
+            }
+        @keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}
 
         /* Mobile View */
         @media (max-width: 768px) {
@@ -285,11 +299,17 @@ align-items: center;
                 gap: 5px;
                 margin-top: 10px;
             }
+            .doctors-grid {
+                grid-template-columns: repeat(2, 1fr) ;
+            }
         }
         @media (max-width:600px ) {
             header {
                 flex-direction: column;
                 gap: 15px;
+            }
+            .doctors-grid {
+                grid-template-columns: repeat(1fr);
             }
         }
         @media (max-width:1300px ) {
@@ -354,37 +374,37 @@ align-items: center;
             <span>ig</span>
           </div>
         </div>
-        <div class="view-profile">View Profile</div>
+        <div class="view-profile">  <a href=""> View Profile </a> </div>
       </div>
 
       <!-- CARD 2 -->
       <div class="doctor-card">
-        <img src="./images_health/pic_2.jpg" />
+        <img src="./images_health/Rectangle 20 (1).png" />
         <div class="doctor-info">
           <h3>Doctor’s Name</h3>
-          <p>NEUROLOGY</p>
+          <p>DOCTOR </p>
           <div class="socials">
             <span>in</span>
             <span>f</span>
             <span>ig</span>
           </div>
         </div>
-        <div class="view-profile">View Profile</div>
+        <div class="view-profile"><a href=""> View profile</a>  </div>
       </div>
 
       <!-- CARD 3 -->
       <div class="doctor-card">
-        <img src="./images_health/pic_3.jpg" />
+        <img src="./images_health/pics_5  (2).jpg" />
         <div class="doctor-info">
           <h3>Doctor’s Name</h3>
-          <p>NEUROLOGY</p>
+          <p>NURSE </p>
           <div class="socials">
             <span>in</span>
             <span>f</span>
             <span>ig</span>
           </div>
         </div>
-        <div class="view-profile">View Profile</div>
+        <div class="view-profile"> <a href=""> View Profile </a>   </div>
       </div>
 
       <!-- Duplicate for second row -->
@@ -392,42 +412,42 @@ align-items: center;
         <img src="./images_health/pic_4.jpg" />
         <div class="doctor-info">
           <h3>Doctor’s Name</h3>
-          <p>NEUROLOGY</p>
+          <p>CARDIOGRAPHY</p>
           <div class="socials">
             <span>in</span>
             <span>f</span>
             <span>ig</span>
           </div>
         </div>
-        <div class="view-profile">View Profile</div>
+        <div class="view-profile">  <a href=""> View profile </a></div>
       </div>
 
       <div class="doctor-card">
         <img src="./images_health/Rectangle 20 (2).png" />
         <div class="doctor-info">
           <h3>Doctor’s Name</h3>
-          <p>NEUROLOGY</p>
+          <p>CARDILOGY</p>
           <div class="socials">
             <span>in</span>
             <span>f</span>
             <span>ig</span>
           </div>
         </div>
-        <div class="view-profile">View Profile</div>
+        <div class="view-profile">  <a href=""> View profile</a></div>
       </div>
 
       <div class="doctor-card">
-        <img src="./images_health/Rectangle 20 (2).png" />
+        <img src="./images_health/pics_5  (1).jpg" />
         <div class="doctor-info">
           <h3>Doctor’s Name</h3>
-          <p>NEUROLOGY</p>
+          <p>Orthopedics</p>
           <div class="socials">
             <span>in</span>
             <span>f</span>
             <span>ig</span>
           </div>
         </div>
-        <div class="view-profile">View Profile</div>
+        <div class="view-profile"> <a href=""> View  Profile </a></div>
       </div>
 
     </div>
