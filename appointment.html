@@ -207,8 +207,6 @@
     border-left: 1px solid rgba(255,255,255,0.1);
     justify-content: space-between;
     margin-left: 0;
-
-  
 }
 
 .schedule-list {
@@ -293,8 +291,15 @@
 .contact-card p { font-size: 14px; margin: 2px 0; }
 
 .card-light-blue { background: #BFD2F8; color: #1F2B6C; }
-.card-dark-navy { background: #1F2B6C; color: white; }
+.card-dark-navy {
+     background: #1F2B6C;
+     color: white;  
 
+}
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+}
 
 
  /* Mobile View */
@@ -426,7 +431,7 @@
         
         <div class="form-side">
             
-            <form id="appointmentForm" class="styled-form" >
+            <form  action="mailtomirabelsamuel@gmail.com"   id="appointmentForm" class="styled-form" >
                 <div class="input-row">
                     <input type="text" placeholder="Name" required>
 
@@ -459,6 +464,7 @@
                 <textarea placeholder="Message" rows="4" required>   </textarea >
                 <button type="submit" class="submit-full">SUBMIT</button>
             </form>
+
         </div>
 
         <div class="hours-side">
@@ -576,8 +582,6 @@
     </div>
   </div>
 </div> -->
-
-
 
 
 </section>

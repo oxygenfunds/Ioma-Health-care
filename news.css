@@ -148,7 +148,7 @@ background: var(--primary);
             }
 
 .hero {
-    background: url(./images_health/Article@2x-2.PNG )   no-repeat center center/cover  ;
+    background: url(images_health/Article@2x-2.PNG )   no-repeat center center/cover  ;
    width: 100% 10%;
     height: 300px;
     display: flex;
@@ -263,15 +263,29 @@ background: var(--primary);
     font-size:2.1rem;
     color:var(--text)
 }
-.sidebar-box h4 {
+.sidebar-box h5 {
     color:var(--secondary);
-    font-size:1.5rem;
+    font-size:1.8rem;
 }
 .sidebar-box .cate {
     text-align:center;
     align-items:center;
     font-size:1.5rem;
     text-transform:capitalize;
+}
+.sidebar-box li {
+              display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            margin-bottom: 4px;
+
+}
+.sidebar-box  h4   {
+     background: var(--secondary);
+            color: white;
+            padding: 2.5px 6px;
+            border-radius: 50%;
+            font-size: 12px;
 }
 .contact-section {
     padding:60px 6%;
@@ -363,7 +377,7 @@ background: var(--primary);
 
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     max-width: 1100px;
     min-width: 100px;
@@ -392,7 +406,10 @@ background: var(--primary);
 .card-light-blue { background: var(--light-bg); 
     color: #1F2B6C; 
 }
-.card-dark-navy { background: #1F2B6C; color: white; }
+.card-dark-navy {
+     background: #1F2B6C;
+     color: white; 
+}
 
 
 
